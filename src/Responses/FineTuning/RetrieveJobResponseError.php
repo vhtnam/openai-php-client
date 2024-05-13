@@ -32,10 +32,10 @@ final class RetrieveJobResponseError implements ResponseContract
     public static function from(array $attributes): ?self
     {
         return new self(
-            $attributes['code'],
-            $attributes['param'],
-            $attributes['message'],
-        );
+			$attributes['code'] ?? null,
+			$attributes['param'] ?? null,
+			$attributes['message'] ?? null,
+		);
     }
 
     /**
